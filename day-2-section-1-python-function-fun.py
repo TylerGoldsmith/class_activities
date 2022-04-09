@@ -2,7 +2,7 @@
 
 def arb_args(*args):
     for a in args:
-        print(a)
+        print("#1: The arguements are: " f"{a}")
 
 arb_args("a", "b", "c")
 
@@ -13,7 +13,7 @@ def inner_func(x,y):
         return x + y
     def inner_2():
         return x - y
-    print("inner_1 + inner_2: " + f"{inner_1() + inner_2()}")
+    print("#2: The sum of the functions inner_1 and inner_2 is: " + f"{inner_1() + inner_2()}")
 
 inner_func(5,2)
 
@@ -22,8 +22,8 @@ inner_func(5,2)
 # The function should print both strings. If a lunch preference is not given, 
 # "Mystery Meat" should be printed instead.
 
-def lunch_lady(name, lunch="mystery meat"):
-    print(name, lunch)
+def lunch_lady(name, lunch="Mystery Meat"):
+    print("#3: The Lunch ladies name is: " + f"{name}"," & their lunch preference is: " f"{lunch}")
 lunch_lady("Sam", "Corn")
 lunch_lady("Sam")
 
@@ -31,7 +31,7 @@ lunch_lady("Sam")
 
 def sum_n_product(x,y):
     return x+y, x*y
-print(sum_n_product(1,1))
+print("#4: The sum and product are: " + f"{sum_n_product(1,1)}")
 
 #5: alias_arb_args - Should be arb_args but assigned an alias. Remember, variables can hold 
 # functions in Python just like they can in JS. Alternatively, you can call a function from 
@@ -46,7 +46,7 @@ def arb_mean(*args):
     total = 0
     for a in args:
         total += a
-    print(a/len(args))
+    print("#6: The mean is: " + f"{a/len(args)}")
 arb_mean(1,5,10)
 
 #7: arb_longest_string - Accepts any number of strings and returns the longest one.
@@ -59,4 +59,4 @@ def arb_longest_string(*args):
       long = len(a)
       longest = a
   return longest
-print(arb_longest_string("hello", "what", "no"))
+print("#7: The longest string is: ", arb_longest_string("hello", "what", "no"))
